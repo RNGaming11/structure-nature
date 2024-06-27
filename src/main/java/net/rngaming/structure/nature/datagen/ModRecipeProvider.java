@@ -22,7 +22,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(RecipeExporter exporter) {
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.MAGIC_SHARD, RecipeCategory.DECORATIONS,
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.MAGIC_SHARD, RecipeCategory.MISC,
                 ModBlocks.MAGIC_BLOCK);
     }
 }

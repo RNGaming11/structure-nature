@@ -8,6 +8,8 @@ import net.minecraft.data.client.Models;
 import net.rngaming.structure.nature.blocks.ModBlocks;
 import net.rngaming.structure.nature.item.ModItems;
 
+import static net.rngaming.structure.nature.item.ModItems.MAGIC_SWORD;
+
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
         super(output);

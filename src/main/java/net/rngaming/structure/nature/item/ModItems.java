@@ -16,16 +16,14 @@ import net.rngaming.structure.nature.StructureNature;
 public class ModItems {
     public static final Item MAGIC_SHARD = registerItem("magic_shard",
             new Item(new Item.Settings()));
-    public static final Item MAGIC_SWORD = registerItem("magic_sword",
-            new Item(new Item.Settings()));
 
 
     private static void addItemToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(MAGIC_SHARD);
     }
 
-    public static final Item RUBY_SWORD = registerItem("ruby_sword",
-            new SwordItem(ModToolMaterial.MAGIC_SWORD, new Item.Settings()));
+        public static final Item MAGIC_SWORD = registerItem("magic_sword",
+                new SwordItem(ModToolMaterial.MAGIC_SWORD, 1 new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(StructureNature.MOD_ID, name), item);
