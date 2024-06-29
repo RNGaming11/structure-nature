@@ -23,7 +23,7 @@ public class ModItems {
     }
 
         public static final Item MAGIC_SWORD = registerItem("magic_sword",
-                new SwordItem(ModToolMaterial.MAGIC_SWORD,  new  FabricItem.Settings()));
+                new SwordItem(ModToolMaterial.MAGIC_SWORD, new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(StructureNature.MOD_ID, name), item);
