@@ -1,6 +1,7 @@
 package net.rngaming.structure.nature.blocks;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
@@ -12,7 +13,7 @@ import net.rngaming.structure.nature.StructureNature;
 
 public class ModBlocks {
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN)));
+            new Block(Block.Settings.copy(Blocks.OBSIDIAN)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

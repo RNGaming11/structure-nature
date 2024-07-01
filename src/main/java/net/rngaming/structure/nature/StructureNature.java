@@ -18,7 +18,7 @@ public class StructureNature implements ModInitializer {
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
 
-		ModItems.registerModIems();
+		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
 

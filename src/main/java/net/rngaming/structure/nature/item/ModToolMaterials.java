@@ -7,21 +7,21 @@ import net.minecraft.registry.tag.TagKey;
 
 import java.util.function.Supplier;
 
-public enum ModToolMaterial implements ToolMaterial {
-    MAGIC_SWORD(1, 1, 26, 9,
-            () -> Ingredient.ofItems(ModItems.MAGIC_SWORD));
+public enum ModToolMaterials implements ToolMaterial {
+    MAGIC(600, 3.0f, 27f, 30,
+             () -> Ingredient.ofItems(ModItems.MAGIC_SWORD));
 
     private final int itemDurability;
     private final float miningSpeed;
     private final float attackDamage;
-    private final int enchantabillity;
+    private final int enchantability;
     private final Supplier<Ingredient> repairIngredient;
 
-    ModToolMaterial(int itemDurability, float miningSpeed, float attackDamage, int enchantabillity, Supplier<Ingredient> repairIngredient) {
+    private ModToolMaterials(int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;
         this.attackDamage = attackDamage;
-        this.enchantabillity = enchantabillity;
+        this.enchantability = enchantability;
         this.repairIngredient = repairIngredient;
     }
 
@@ -47,7 +47,7 @@ public enum ModToolMaterial implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return this.enchantabillity;
+        return this.enchantability;
     }
 
     @Override
