@@ -16,7 +16,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.structure-nature"))
                     .icon(() -> new ItemStack(ModItems.MAGIC_SHARD)).entries((displayContext, entries) -> {
                         entries.add(ModItems.MAGIC_SHARD);
-
+                        entries.add(ModItems.MAGIC_GEM);
                         entries.add(ModItems.MAGIC_SWORD);
 
 

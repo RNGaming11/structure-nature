@@ -1,28 +1,39 @@
 package net.rngaming.structure.nature.item;
 
+import com.google.common.base.Suppliers;
 import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    MAGIC(600, 3.0f, 27f, 30,
-             () -> Ingredient.ofItems(ModItems.MAGIC_SWORD));
+
+    MAGIC(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 3200, 9.0F, 30.0F, 17, () -> Ingredient.ofItems(ModItems.MAGIC_SWORD));
 
     private final int itemDurability;
+    private final TagKey<Block> inverseTag;
     private final float miningSpeed;
     private final float attackDamage;
     private final int enchantability;
     private final Supplier<Ingredient> repairIngredient;
 
-    private ModToolMaterials(int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
+    ModToolMaterials(
+            final TagKey<Block> inverseTag,
+            final int itemDurability,
+            final float miningSpeed,
+            final float attackDamage,
+            final int enchantability,
+            final Supplier<Ingredient> repairIngredient
+    ) {
+        this.inverseTag = inverseTag;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;
         this.attackDamage = attackDamage;
         this.enchantability = enchantability;
-        this.repairIngredient = repairIngredient;
+        this.repairIngredient = Suppliers.memoize(repairIngredient::get);
     }
 
     @Override
@@ -42,7 +53,7 @@ public enum ModToolMaterials implements ToolMaterial {
 
     @Override
     public TagKey<Block> getInverseTag() {
-        return null;
+        return this.inverseTag;
     }
 
     @Override
