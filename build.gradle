@@ -11,8 +11,13 @@ base {
 }
 
 repositories {
-
-	maven {url = "https://maven.kyrptonaught.dev"}
+	maven {
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven"
+		content {
+			includeGroup "maven.modrinth"
+		}
+	}
 }
 
 fabricApi {
@@ -27,7 +32,6 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:0.100.1+1.21"
-
 }
 
 
