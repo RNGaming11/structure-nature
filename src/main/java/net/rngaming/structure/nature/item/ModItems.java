@@ -17,7 +17,6 @@ public class ModItems {
     public static final Item MAGIC_GEM = registerItem("magic_gem",
             new Item(new Item.Settings()));
 
-
     private static void addItemToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(MAGIC_SHARD);
         entries.add(MAGIC_GEM);
