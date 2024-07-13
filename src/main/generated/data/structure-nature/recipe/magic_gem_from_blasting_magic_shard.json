@@ -1,8 +1,8 @@
 {
   "type": "minecraft:blasting",
   "category": "misc",
-  "cookingtime": 10000,
-  "experience": 50.0,
+  "cookingtime": 20000,
+  "experience": 82.0,
   "group": "magic",
   "ingredient": {
     "item": "structure-nature:magic_shard"

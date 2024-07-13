@@ -1,5 +1,6 @@
 package net.rngaming.structure.nature.item;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.item.EnchantedBookItem;
 import net.rngaming.structure.nature.StructureNature;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -10,13 +11,14 @@ import net.minecraft.util.Identifier;
 import net.rngaming.structure.nature.blocks.ModBlocks;
 
 public class ModItemGroups {
-    public static final ItemGroup STRUCTURE_NATURE_GROUP = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup STRUCTURE_NATURE = Registry.register(Registries.ITEM_GROUP,
              Identifier.of(StructureNature.MOD_ID, "magic_shard"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.structure-nature"))
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.structure"))
                     .icon(() -> new ItemStack(ModItems.MAGIC_SHARD)).entries((displayContext, entries) -> {
                         entries.add(ModItems.MAGIC_SHARD);
                         entries.add(ModItems.MAGIC_GEM);
 
+                        
 
                         entries.add(ModItems.MAGIC_SWORD);
 

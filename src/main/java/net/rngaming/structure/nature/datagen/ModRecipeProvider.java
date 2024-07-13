@@ -29,7 +29,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 ModBlocks.MAGIC_BLOCK);
 
         offerBlasting(exporter, MAGIC_SMELT, RecipeCategory.MISC, ModItems.MAGIC_GEM,
-                50f, 15000, "magic");
+                82f, 20000, "magic");
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.MAGIC_SWORD, 1)
                 .pattern("X")
