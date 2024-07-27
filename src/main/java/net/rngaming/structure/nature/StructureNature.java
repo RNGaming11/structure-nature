@@ -17,6 +17,8 @@ public class StructureNature implements ModInitializer {
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
 
+		StructureNatureClient.registerPlayerClient();
+
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 	}

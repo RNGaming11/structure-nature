@@ -25,7 +25,7 @@ public class ModItems {
     public static final Item MAGIC_SWORD = registerItem(
             "magic_sword",
             new SwordItem(
-                    ModToolMaterials.MAGIC, new Item.Settings().fireproof().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.MAGIC, 20, -3.0F))
+                    ModToolMaterials.MAGIC, new Item.Settings().fireproof().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.MAGIC, 30, -3.0F))
             )
     );
 
@@ -34,7 +34,7 @@ public class ModItems {
     }
 
     public static void registerModItems() {
-        StructureNature.LOGGER.info("Registering Mod Items for " + StructureNature.MOD_ID);
+        StructureNature.LOGGER.info("Registering and Loading Items for " + StructureNature.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemToIngredientTabItemGroup);
     }

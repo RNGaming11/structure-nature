@@ -29,6 +29,6 @@ public class ModItemGroups {
 
 
     public static void registerItemGroups() {
-        StructureNature.LOGGER.info("Registering Item Groups for " + StructureNature.MOD_ID);
+        StructureNature.LOGGER.info("Registering and Loading Item Groups for " + StructureNature.MOD_ID);
     }
 }

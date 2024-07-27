@@ -26,6 +26,6 @@ public class ModBlocks {
     }
 
     public static void registerModBlocks() {
-        StructureNature.LOGGER.info("Registering ModBlocks for" + StructureNature.MOD_ID);
+        StructureNature.LOGGER.info("Registering and Loading Blocks for " + StructureNature.MOD_ID);
     }
 }

@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "structure-nature",
-	"version": "1.0",
+	"version": "1.1",
 	"name": "Structure Nature",
 	"description": "a new structure to minecraft",
 	"authors": [
@@ -12,7 +12,7 @@
 	},
 	"license": "All Rights Reserved",
 	"icon": "assets/structure-nature/icon.png",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
 		"main": [
 			"net.rngaming.structure.nature.StructureNature"
