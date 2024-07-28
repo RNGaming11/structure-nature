@@ -4,7 +4,9 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.world.dimension.DimensionType;
 import net.rngaming.structure.nature.datagen.*;
+import net.rngaming.structure.nature.world.biome.ModBiomes;
 import net.rngaming.structure.nature.world.dimension.ModDimensions;
 
 
@@ -22,5 +24,6 @@ public class StructureNatureDataGenerator implements DataGeneratorEntrypoint {
 
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::bootstrapType);
+		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::boostrap);
 	}
 }
