@@ -22,6 +22,7 @@ public class StructureNatureDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModWorldGenerator::new);
 	}
 
+	@Override
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::bootstrapType);
 		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::boostrap);
