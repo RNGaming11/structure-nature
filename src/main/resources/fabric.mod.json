@@ -12,7 +12,7 @@
 	},
 	"license": "All Rights Reserved",
 	"icon": "assets/structure-nature/icon.png",
-	"environment": "client",
+	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"net.rngaming.structure.nature.StructureNature"

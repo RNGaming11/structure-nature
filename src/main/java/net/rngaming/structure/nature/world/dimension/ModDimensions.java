@@ -32,7 +32,7 @@ public class ModDimensions {
                 1.0, // coordinateScale
                 false, // bedWorks
                 true, // respawnAnchorWorks
-                2, // minY
+                16, // minY
                 256, // height
                 256, // logicalHeight
                 BlockTags.INFINIBURN_OVERWORLD, // infiniburn
