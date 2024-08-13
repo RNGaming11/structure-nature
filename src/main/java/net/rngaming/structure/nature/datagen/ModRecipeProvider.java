@@ -15,6 +15,7 @@ import net.rngaming.structure.nature.item.ModItems;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+
 public class ModRecipeProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> MAGIC_SMELT = List.of(ModItems.MAGIC_SHARD,
             ModItems.MAGIC_GEM);

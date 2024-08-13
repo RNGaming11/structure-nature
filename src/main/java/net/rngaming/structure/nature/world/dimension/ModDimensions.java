@@ -20,10 +20,10 @@ public class ModDimensions {
     public static final RegistryKey<World> MAGIC_DIM_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,
             Identifier.of(StructureNature.MOD_ID, "magic_dim"));
     public static final RegistryKey<DimensionType> MAGIC_DIM_TYPE = RegistryKey.of(RegistryKeys.DIMENSION_TYPE,
-            Identifier.of(StructureNature.MOD_ID, "magic_dim"));
+            Identifier.of(StructureNature.MOD_ID, "magic_dim_type"));
 
     public static void bootstrapType(Registerable<DimensionType> context) {
-        context.register(MAGIC_DIM_TYPE, new DimensionType(
+        context.register(MAGIC_DIM_TYPE, new DimensionType (
                 OptionalLong.of(12000), // fixedTime
                 false, // hasSkylight
                 true, // hasCeiling
@@ -32,11 +32,11 @@ public class ModDimensions {
                 1.0, // coordinateScale
                 false, // bedWorks
                 true, // respawnAnchorWorks
-                16, // minY
-                256, // height
+                20, // minY
+                328, // height
                 256, // logicalHeight
-                BlockTags.INFINIBURN_OVERWORLD, // infiniburn
-                DimensionTypes.OVERWORLD_ID, // effectsLocation
+                BlockTags.INFINIBURN_OVERWORLD,
+                DimensionTypes.OVERWORLD_ID,
                 1.2f, // ambientLight
                 new DimensionType.MonsterSettings(false, false, UniformIntProvider.create(0, 0), 0)));
     }
